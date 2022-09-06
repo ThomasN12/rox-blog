@@ -1,4 +1,4 @@
-# alpha-blog-frontend
+# rox-blog-frontend
 
 ## Project setup
 ```

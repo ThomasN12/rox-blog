@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  // height: 100%;
+}
+
+// body {
+//   min-height: 100vh;
+//   padding: 0;
+// }
+
+.my-jumbotron {
+  background-image: url("@/assets/img/blog-background-2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+  // background: url("@/assets/img/logo.png")
+}   
