@@ -109,6 +109,8 @@ const routes = [
 
 const router = new Router({
   mode: "history", // https://router.vuejs.org/api/#mode
+  // base: "/rox-blog-frontend",
+  base: process.env.BASE_URL,
   linkActiveClass: "active",
   scrollBehavior: () => ({ y: 0 }),
   routes
