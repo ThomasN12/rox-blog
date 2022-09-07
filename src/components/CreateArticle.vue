@@ -95,17 +95,14 @@ export default {
 
       const data = await this.createArticle(formData);
       if (data.success) {
-        // console.log(data);
         this.isLoading = false;
-
         const { article } = data.data;
-        console.log(article);
         this.$toasted.success(data.message);
         this.$router.push(`/articles/${article.id}`);
       } else {
         this.isLoading = false;
+        this.$toasted.error(data.errors[0].message);
       }
-      console.log(data);
     },
   },
   data() {

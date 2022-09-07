@@ -74,7 +74,6 @@ export default {
       getCurrentUserInfo: "getCurrentUserInfo",
     }),
     async submitHandler() {
-      console.log("SUBMIT!");
       const formData = {
         username: this.username,
         email: this.email,

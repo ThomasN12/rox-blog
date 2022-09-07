@@ -95,7 +95,6 @@ export default {
       // getCurrentUserInfo: "getCurrentUserInfo",
     }),
     async deleteUserHandler(userId) {
-      console.log(userId);
       if (
         confirm(
           "Are you sure you want to delete this user account and all associated articles"
@@ -108,7 +107,6 @@ export default {
         if (data.success) {
           this.$toasted.success(data.message);
         }
-        console.log(userId);
       }
     },
   },

@@ -31,7 +31,7 @@ export default {
     const data = await this.getCategoryById(formData);
     if (data.success) {
       this.category = data.data.category;
-      console.log(this.category);
+      // console.log(this.category);
     }
   },
   data() {

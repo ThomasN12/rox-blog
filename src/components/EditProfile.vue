@@ -104,7 +104,6 @@ export default {
         this.$toasted.success(data.message);
         await this.getCurrentUserInfo();
         this.$router.push(`/users/${this.id}`);
-        // this.$router.go(-1);
       } else {
         this.$toasted.error(data.errors[0].message);
       }

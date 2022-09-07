@@ -113,7 +113,6 @@ export default {
       return (this.userInfo && this.userInfo.id) || article.user.id;
     },
     checkIsAuthorized(article) {
-      // console.log(this.currentUserInfo)
       const articleId = this.getUserId(article);
       return (
         this.isLoggedIn &&

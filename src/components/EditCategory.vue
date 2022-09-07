@@ -76,14 +76,14 @@ export default {
       const data = await this.updateCategoryById(formData);
       if (data.success) {
         this.isLoading = false;
-        const { category } = data.data;
-        console.log(category);
+        // const { category } = data.data;
+        // console.log(category);
         this.$toasted.success(data.message);
         // this.$router.push(`/articles/${article.id}`);
       } else {
         this.isLoading = false;
       }
-      console.log(data);
+      // console.log(data);
     },
   },
   computed: {

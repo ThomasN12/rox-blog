@@ -93,17 +93,13 @@ export default {
       // console.log(this.article);
       this.title = title;
       this.description = description;
-      console.log(categories);
-      //To-do: Fix edit categories
+      // console.log(categories);
       categories.forEach((obj) => {
         this.selectedCategories.push(obj.id);
       });
-      // console.log(tempCategories);
-      // this.selectedCategories = this.selectedCategories.concat(tempCategories);
-      // this.selectedCategories = tempCategories;
-      console.log(this.selectedCategories);
-    } else {
-      console.log("ERROR");
+    } else
+    {
+      this.$toasted.error(dataArticle.errors[0].message);
     }
   },
   data() {
@@ -135,9 +131,12 @@ export default {
         category_ids: this.selectedCategories,
       };
       const data = await this.updateArticle(formData);
+      // console.log(data);
       if (data.success) {
         this.$toasted.success(data.message);
         this.$router.push("/articles");
+      } else {
+        this.$toasted.error(data.errors[0].message);
       }
     },
   },

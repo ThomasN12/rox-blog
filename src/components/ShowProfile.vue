@@ -25,8 +25,6 @@ export default {
     ArticlesPartial,
   },
   async created() {
-    // console.log(this.$route.params.id);
-    console.log(this.currentUserInfo);
     const formData = {
       id: this.id,
     };

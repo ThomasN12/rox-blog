@@ -63,14 +63,14 @@ export default {
       if (data.success) {
         // console.log(data);
         this.isLoading = false;
-        const { category } = data.data;
-        console.log(category);
+        // const { category } = data.data;
+        // console.log(category);
         this.$toasted.success(data.message);
         this.$router.push(`/categories`);
       } else {
         this.isLoading = false;
       }
-      console.log(data);
+      // console.log(data);
     },
   },
   computed: {

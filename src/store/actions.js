@@ -9,8 +9,8 @@ export default {
                 commit('set', ['listArticle', data.data.articles])
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },
 
@@ -24,8 +24,8 @@ export default {
                 return data;
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },
 
@@ -33,13 +33,12 @@ export default {
         return Api.requestServer
             .post(`/articles`, formData)
             .then((response) => {
-                // console.log(response);
                 const { data } = response;
                 return data;
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },
 
@@ -49,7 +48,6 @@ export default {
             .patch(`/articles/${id}`, formData)
             .then((response) => {
                 const { data } = response;
-                console.log(data)
                 return data;
             })
             .catch((error) => {
@@ -64,7 +62,6 @@ export default {
             .delete(`/articles/${id}`)
             .then((response) => {
                 const { data } = response;
-                console.log(data)
                 return data;
             })
             .catch((error) => {
@@ -78,7 +75,6 @@ export default {
             .post(`/signup`, formData)
             .then((response) => {
                 const { data } = response;
-                console.log(data);
                 if (data.success)
                 {
                     commit('set', ['isLoggedIn', true]);
@@ -96,9 +92,7 @@ export default {
         return Api.requestServer
             .post(`/login`, formData)
             .then((response) => {
-                console.log(response);
                 const { data } = response;
-                // console.log(data);
                 if (data.success)
                 {
                     commit('set', ['isLoggedIn', true]);
@@ -136,7 +130,6 @@ export default {
             .then((response) => {
                 const { data } = response;
                 commit('set', ['listUser', data.data.users]);
-                console.log(response);
             })
             .catch((error) => {
                 const data = error.response.data;
@@ -154,7 +147,6 @@ export default {
                     commit('set', ['currentUserInfo', data.data.user]);
                     // return data.data.user;
                 }
-                // console.log(data);
                 return data;
             })
             .catch((error) => {
@@ -171,13 +163,12 @@ export default {
                 const { data } = response;
                 // commit('set', ['userInfo', data.data.user]);
                 // commit('set', ['userInfo', data.data.user]);
-                console.log(data);
                 // return data.data.user;
                 return data;
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },
 
@@ -187,7 +178,6 @@ export default {
             .patch(`/update_account`, formData)
             .then((response) => {
                 const { data } = response;
-                // console.log(data)
                 return data;
             })
             .catch((error) => {
@@ -198,16 +188,14 @@ export default {
 
     async deleteUser({ commit }, formData) {
         const { id } = formData;
-        // console.log(formData);
         return Api.requestServer
             .delete(`/users/${id}`, formData)
             .then((response) => {
                 const { data } = response;
-                console.log(data)
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },    
     async getListCategory({ commit }) {
@@ -219,8 +207,8 @@ export default {
                 return data;
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },
 
@@ -233,8 +221,8 @@ export default {
                 return data;
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },
 
@@ -242,13 +230,12 @@ export default {
         return Api.requestServer
             .post(`/categories`, formData)
             .then((response) => {
-                // console.log(response);
                 const { data } = response;
                 return data;
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
     },
     
@@ -257,13 +244,12 @@ export default {
         return Api.requestServer
             .patch(`/categories/${id}`, formData)
             .then((response) => {
-                // console.log(response);
                 const { data } = response;
                 return data;
             })
             .catch((error) => {
-                // return error.response.data
-                console.log(error);
+                const data = error.response.data;
+                return data;
             });
 
     }
