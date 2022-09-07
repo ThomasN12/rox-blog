@@ -58,7 +58,7 @@
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-form>
+          <!-- <b-nav-form>
             <b-form-input
               size="sm"
               class="mr-sm-2"
@@ -71,7 +71,7 @@
               variant="success"
               >Search</b-button
             >
-          </b-nav-form>
+          </b-nav-form> -->
 
           <!-- <b-nav-item-dropdown text="Lang" right>
             <b-dropdown-item href="#">EN</b-dropdown-item>

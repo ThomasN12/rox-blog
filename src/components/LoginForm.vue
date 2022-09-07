@@ -90,7 +90,6 @@ export default {
       getCurrentUserInfo: "getCurrentUserInfo",
     }),
     async submitLoginHandler() {
-      console.log("SUBMIT!");
       const formData = {
         // id: this.$route.params.id,
         username: this.username,

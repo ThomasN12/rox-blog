@@ -123,7 +123,6 @@ export default {
       getListCategory: "getListCategory",
     }),
     async submitHandler() {
-      console.log("SUBMIT!");
       const formData = {
         title: this.title,
         description: this.description,
