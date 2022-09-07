@@ -79,6 +79,7 @@ export default {
         email: this.email,
         password: this.password,
       };
+      this.isLoading = true;
       const data = await this.signup(formData);
       if (data.success) {
         this.isLoading = false;

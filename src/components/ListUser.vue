@@ -74,8 +74,6 @@ import { mapActions, mapGetters } from "vuex";
 export default {
   async created() {
     await this.getListUser();
-    // console.log(this.$pluralize("user", 0));
-    // await this.getCurrentUserInfo();
   },
   data() {
     return {};
@@ -106,6 +104,10 @@ export default {
         const data = await this.deleteUser(formData);
         if (data.success) {
           this.$toasted.success(data.message);
+          await this.getListUser();
+        } else
+        {
+          this.$toasted.error(data.message);
         }
       }
     },

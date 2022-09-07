@@ -192,6 +192,7 @@ export default {
             .delete(`/users/${id}`, formData)
             .then((response) => {
                 const { data } = response;
+                return data;
             })
             .catch((error) => {
                 const data = error.response.data;
